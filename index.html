@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.7)), url('background.jpg');
+    background-blur: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+  }
+
+  .mockup-container {
+    position: relative;
+    width: 480px;
+    height: 720px;
+    overflow: hidden;
+  }
+
+  .mockup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 300px; /* Tamaño simulado de pantalla de celular */
+    max-height: 600px;
+    transform: translateX(100%);
+    transition: transform 1s ease-in-out;
+  }
+
+  .mockup.active {
+    transform: translateX(0);
+  }
+
+  .description {
+    flex: 1;
+    margin-left: 20px;
+  }
+</style>
+<title>Presentación de Mockups - CARTA INC</title>
+</head>
+<body>
+  <div class="header">
+    <h1>CARTA INC</h1>
+  </div>
+  <div class="content">
+    <div class="mockup-container">
+      <img class="mockup active" src="img/4.png" alt="Mockup 1">
+      <img class="mockup" src="img/5.png" alt="Mockup 2">
+      <img class="mockup" src="img/7.png" alt="Mockup 3">
+      <img class="mockup" src="img/8.png" alt="Mockup 4">
+    </div>
+    <div class="description">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet sapien in mauris eleifend venenatis.</p>
+    </div>
+  </div>
+
+  <script>
+    const mockups = document.querySelectorAll('.mockup');
+    const descriptions = document.querySelector('.description p');
+    let currentMockupIndex = 0;
+
+    function showNextMockup() {
+      mockups[currentMockupIndex].classList.remove('active');
+      currentMockupIndex = (currentMockupIndex + 1) % mockups.length;
+      mockups[currentMockupIndex].classList.add('active');
+
+      // Actualizar la descripción
+      descriptions.textContent = getDescription(currentMockupIndex);
+    }
+
+    function getDescription(index) {
+      const descriptions = [
+        "En el primer mockup se puede visualizar la pantalla principal, en donde se ven los primeros cuatro botones de interaccion para eleccion del usuario",
+        "En este mockup se puede visualizar la opcion 'Crea tu menu' en donde el usuario podra empezar a realizar su menu.",
+        "Se podria visualizar la informacion de el producto ingresado y que genero el usuario, tambien podra agregarlo o visualizarlo.",
+        "Aca se podra visualizar la informacion y los widgets de tu menu, adicional poder imprimir el menu y generar un codigo QR"
+      ];
+
+      return descriptions[index];
+    }
+
+    setInterval(showNextMockup, 7000); // Cambiar de mockup cada 3 segundos
+  </script>
+</body>
+</html>
