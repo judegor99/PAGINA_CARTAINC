@@ -1,35 +1,41 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const mockupCarousel = document.getElementById('mockup-carousel');
-  const advancesCarousel = document.getElementById('advances-carousel');
+  const imageCarousel = document.getElementById('image-carousel');
   const imageDescription = document.getElementById('image-description');
   const fadeInDuration = 1000; // Duración de la animación de aparición (en milisegundos)
   const fadeOutDuration = 1000; // Duración de la animación de desaparición (en milisegundos)
+  let currentIndex = 0;
 
-  function showImageWithDescription(carousel) {
-      const slides = carousel.querySelectorAll('.image-slide');
-      let currentIndex = 0;
+  function showImageWithDescription() {
+      const slides = imageCarousel.querySelectorAll('.image-slide');
 
-      function showSlide(index) {
-          slides.forEach((slide, i) => {
-              if (i === index) {
-                  slide.style.opacity = 1;
-              } else {
-                  slide.style.opacity = 0;
-              }
-          });
-          const description = slides[index].querySelector('.carousel-description').textContent;
-          imageDescription.textContent = description;
+      if (currentIndex >= slides.length) {
+          currentIndex = 0;
       }
 
-      function nextSlide() {
-          showSlide(currentIndex);
-          currentIndex = (currentIndex + 1) % slides.length;
-      }
+      slides.forEach((slide, i) => {
+          if (i === currentIndex) {
+              slide.style.display = 'block';
+          } else {
+              slide.style.display = 'none';
+          }
+      });
 
-      showSlide(currentIndex);
-      setInterval(nextSlide, 5000);
+      const currentSlide = slides[currentIndex];
+      const description = currentSlide.querySelector('.carousel-description').textContent;
+      imageDescription.textContent = description;
+
+      currentIndex++;
+
+      setTimeout(hideCurrentSlide, 5000); // Cambiar cada 5 segundos
   }
 
-  showImageWithDescription(mockupCarousel);
-  showImageWithDescription(advancesCarousel);
+  function hideCurrentSlide() {
+      const currentSlide = imageCarousel.querySelector('.image-slide[style="display: block;"]');
+      if (currentSlide) {
+          currentSlide.style.display = 'none';
+      }
+      showImageWithDescription();
+  }
+
+  showImageWithDescription();
 });
