@@ -1,0 +1,100 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+header {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 24px;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Estilos para el carrusel de mockups */
+.mockup-container {
+  display: flex;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.mockup {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0;
+  transition: transform 0.5s;
+}
+
+.description {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Estilos para la sección de últimos avances */
+.additional-info {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.image-slider {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.image-slider .slide {
+  width: 48%;
+  margin: 10px;
+  text-align: center;
+}
+
+.image-slider img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.image-slider p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Estilos para la fuente */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-weight: bold;
+}
+
+/* Otros estilos personalizados que desees agregar */
+
