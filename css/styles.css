@@ -5,96 +5,166 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
+  background-image: url('img/fondo.jpg'); /* Ruta a la imagen de fondo */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+  background-repeat: no-repeat; /* Evita que se repita la imagen de fondo */
 }
 
+/* Estilos para el encabezado (header) */
 header {
   text-align: center;
-  background-color: #333;
+  background: linear-gradient(45deg, #333, #ff9900); /* Degradado de fondo */
   color: #fff;
   padding: 20px 0;
   font-size: 24px;
 }
 
-main {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilos para el logotipo */
+img {
+  max-width: 100px; /* Ajusta el tamaño del logotipo según tus necesidades */
+  height: auto;
+  margin-left: 20px; /* Añade espacio entre el título y el logotipo */
+}
+
+/* Estilos para la sección del h2 */
+.centered-text {
+  text-align: center; /* Centra el texto */
+  font-size: 18px; /* Tamaño de fuente ajustado */
+  color: #333; /* Color del texto */
+  margin: 20px 0; /* Espaciado superior e inferior */
 }
 
 /* Estilos para el carrusel de mockups */
-.mockup-container {
+.carousel-container {
   display: flex;
-  overflow: hidden;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.mockup {
-  width: 100%;
+/* Estilos para los botones con degradado */
+.gradient-button {
+  background: linear-gradient(45deg, #333, #ff9900); /* Degradado de fondo */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.image-carousel {
   max-width: 300px;
-  height: auto;
-  margin: 0;
-  transition: transform 0.5s;
+  overflow: hidden;
+  text-align: center; /* Añade este estilo para centrar la imagen */
 }
 
-.description {
-  text-align: center;
-  font-size: 18px;
-  margin-top: 10px;
-  color: #333;
+.image-slide {
+  display: none;
 }
 
-/* Estilos para la sección de últimos avances */
-.additional-info {
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-h2 {
-  font-size: 24px;
-  color: #333;
-}
-
-.image-slider {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.image-slider .slide {
-  width: 48%;
-  margin: 10px;
-  text-align: center;
-}
-
-.image-slider img {
+.carousel-image {
   max-width: 100%;
   height: auto;
   border: 1px solid #ddd;
   border-radius: 8px;
 }
 
-.image-slider p {
+.carousel-description {
   font-size: 16px;
   margin: 10px 0;
   color: #333;
 }
 
-/* Estilos para la fuente */
+/* Resto de estilos (dejados sin cambios) */
+/* ... */
+/* Estilos generales */
 body {
   font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('img/fondo.jpg'); /* Ruta a la imagen de fondo */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+  background-repeat: no-repeat; /* Evita que se repita la imagen de fondo */
 }
 
-h1, h2 {
-  font-family: 'Helvetica', Arial, sans-serif;
-  font-weight: bold;
+/* Estilos para el encabezado (header) */
+header {
+  text-align: center;
+  background: linear-gradient(45deg, #333, #ff9900); /* Degradado de fondo */
+  color: #fff;
+  padding: 20px 0;
+  font-size: 24px;
 }
 
-/* Otros estilos personalizados que desees agregar */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+/* Estilos para el logotipo */
+img {
+  max-width: 100px; /* Ajusta el tamaño del logotipo según tus necesidades */
+  height: auto;
+  margin-left: 20px; /* Añade espacio entre el título y el logotipo */
+}
+
+/* Estilos para el texto en la sección h2 */
+.centered-text {
+  text-align: center; /* Centra el texto */
+  font-size: 18px; /* Tamaño de fuente ajustado */
+  color: #333; /* Color del texto */
+  margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+/* Estilos para el carrusel de mockups */
+.carousel-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilos para los botones "Anterior" y "Siguiente" con degradado */
+.gradient-button {
+  background: linear-gradient(45deg, #333, #ff9900); /* Degradado de fondo */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Estilos para el contenedor del carrusel de imágenes */
+.image-carousel {
+  max-width: 300px;
+  overflow: hidden;
+  text-align: center; /* Añade este estilo para centrar la imagen */
+}
+
+/* Estilos para las diapositivas de imágenes */
+.image-slide {
+  display: none;
+}
+
+/* Estilos para las imágenes en el carrusel */
+.carousel-image {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Estilos para la descripción del carrusel */
+.carousel-description {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Resto de estilos (dejados sin cambios) */
+/* ... */

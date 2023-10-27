@@ -8,63 +8,81 @@
 </head>
 <body>
     <header>
-        <h1>CARTA INC</h1>
+        <div class="header-content">
+            <h1>CARTA INC</h1>
+            <img src="img/logo.png" alt="Logo de la empresa">
+        </div>
     </header>
     <main>
         <section class="carousel-section">
-            <h2>Mockups</h2>
-            <div class="image-carousel" id="image-carousel">
-                <div class="image-slide">
-                    <div class="image-description">
-                        <p class="carousel-description">Descripción de Mockup 1</p>
-                        <img class="carousel-image" src="img/4.png" alt="Mockup 1">
+            <h2 class="centered-text">
+                Carta INC es una aplicación que te permite crear un menú digital para tu restaurante, facilitando la creación de menús interactivos.
+            </h2>
+            <div class="carousel-container">
+                <button id="prev-button" class="carousel-button gradient-button">Anterior</button>
+                <div class="image-carousel" id="image-carousel">
+                    <div class="image-slide">
+                        <div class="image-description">
+                            <p class="carousel-description">La interfaz principal es la pantalla de inicio de la aplicación. Muestra un fondo personalizado con el logotipo del restaurante en el centro. Ofrece cuatro botones que permiten al usuario:
+
+                                Crear un menú.
+                                Acceder al menú existente.
+                                Configurar el menú.
+                                Generar y visualizar el menú en formato PDF.
+                                Los botones tienen un diseño atractivo y la pantalla utiliza una imagen de fondo personalizada.</p>
+                            <img class="carousel-image" src="img/4.png" alt="Mockup 1">
+                        </div>
+                    </div>
+                    <div class="image-slide">
+                        <div class="image-description">
+                            <p class="carousel-description">Permite al usuario seleccionar una categoría de menú (por ejemplo, "Entradas") y agregar elementos a esa categoría.
+                                Los elementos del menú incluyen información como nombre, descripción, precio y una imagen.
+                                Los elementos se agregan a la categoría correspondiente y se pueden visualizar en la pantalla de "Accede al Menú".</p>
+                            <img class="carousel-image" src="img/5.png" alt="Mockup 2">
+                        </div>
+                    </div>
+                    <div class="image-slide">
+                        <div class="image-description">
+                            <p class="carousel-description">Permite al usuario agregar elementos de menú a una sección específica.
+                                Los elementos de menú incluyen información como nombre, descripción, precio e imagen.
+                                Los elementos se agregan a una sección del menú y se pueden visualizar en la pantalla "Accede al Menú".</p>
+                            <img class="carousel-image" src="img/7.png" alt="Mockup 3">
+                        </div>
+                    </div>
+                    <div class="image-slide">
+                        <div class="image-description">
+                            <p class="carousel-description">Gestiona el estado global de la aplicación y almacena la información del menú.
+                                Contiene datos como el nombre del restaurante, su logotipo, las secciones del menú y los elementos de menú.
+                                Proporciona métodos para agregar secciones, elementos de menú y configurar el logotipo del restaurante.</p>
+                            <img class="carousel-image" src="img/8.png" alt="Mockup 4">
+                        </div>
+                    </div>
+                    <div class="image-slide">
+                        <div class="image-description">
+                            <p class="carousel-description">Permite al usuario configurar el menú, incluyendo la capacidad de eliminar elementos de menú y cambiar su visibilidad.
+                                Los elementos de menú se muestran en una lista y se pueden eliminar deslizando hacia la izquierda o cambiar su visibilidad al tocarlos.</p>
+                            <img class="carousel-image" src="img/1.png" alt="Mockup 4">
+                        </div>
+                    </div>
+                    <div class="image-slide">
+                        <div class="image-description">
+                            <p class="carousel-description">Permite al usuario generar un menú en formato PDF que incluye el nombre del restaurante, su logotipo, las secciones y los elementos del menú.
+                                El usuario puede personalizar el nombre del restaurante y cargar un logotipo.
+                                El menú generado se puede visualizar en la pantalla y se puede compartir como un archivo PDF.</p>
+                            <img class="carousel-image" src="img/2.png" alt="Mockup 4">
+                        </div>
+                        <div class="image-slide">
+                            <div class="image-description">
+                                <p class="carousel-description">PDF DE PRUEBA</p>
+                                <img class="carousel-image" src="img/3.png" alt="Mockup 4">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="image-slide">
-                    <div class="image-description">
-                        <p class="carousel-description">Descripción de Mockup 2</p>
-                        <img class="carousel-image" src="img/5.png" alt="Mockup 2">
-                    </div>
-                </div>
-                <div class="image-slide">
-                    <div class="image-description">
-                        <p class="carousel-description">Descripción de Mockup 3</p>
-                        <img class="carousel-image" src="img/7.png" alt="Mockup 3">
-                    </div>
-                </div>
-                <div class="image-slide">
-                    <div class="image-description">
-                        <p class="carousel-description">Descripción de Mockup 4</p>
-                        <img class="carousel-image" src="img/8.png" alt="Mockup 4">
-                    </div>
-                </div>
-            </div>
-            <h2>Últimos Avances</h2>
-            <div class="image-carousel" id="image-carousel">
-                <div class="image-slide">
-                    <div class="image-description">
-                        <p class="carousel-description">Login del usuario</p>
-                        <img class="carousel-image" src="img/11_login.png" alt="Login del usuario">
-                    </div>
-                </div>
-                <div class="image-slide">
-                    <div class="image-description">
-                        <p class="carousel-description">Página principal al iniciar sesión</p>
-                        <img class="carousel-image" src="img/10_pantalla principal.png" alt="Página principal al iniciar sesión">
-                    </div>
-                </div>
-                <div class="image-slide">
-                    <div class="image-description">
-                        <p class="carousel-description">Interfaz para agregar platos</p>
-                        <img class="carousel-image" src="img/12_Creamenu.png" alt="Interfaz para agregar platos">
-                    </div>
-                </div>
-                <!-- Agrega más imágenes de avance aquí -->
+                <button id="next-button" class="carousel-button gradient-button">Siguiente</button>
             </div>
         </section>
     </main>
-    <section class="description">
-        <p id="image-description">Descripción de las imágenes</p>
     </section>
     <script src="js/script.js"></script>
 </body>
